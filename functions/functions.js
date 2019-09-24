@@ -25,7 +25,7 @@ function bakeACake(ingredientOne, ingredientTwo) {
 }
 
 //console.log("This function will have different results depending on what we put into the parameters:")
-//bakeACake("milk", "eggs"); 
+bakeACake("milk", "eggs"); 
 
 //The value of 'ingredientOne' will be 'milk'
 //The value of 'ingredientTwo' will be 'eggs'
@@ -35,6 +35,7 @@ function bakeACake(ingredientOne, ingredientTwo) {
 
 /* ================================================= */
 
+
 //we can also store entire functions into variables!!
 //(this is called a 'function expression')
 var sum = function (numberOne, numberTwo) {
@@ -42,10 +43,12 @@ var sum = function (numberOne, numberTwo) {
     console.log("The sum of " + numberOne + " and " + numberTwo + " is " + result);
     return result;
 }
+let theResult = sum(2, 2);
+console.log("The result is: " + theResult);
 
 //when we want to run a function expression, we invoke it with the () just as we would any other function
-//console.log("This function expression works just like any other function...");
-//sum(2, 2);
+console.log("This function expression works just like any other function...");
+
 //console.log("...as long as you are careful to call it ONLY AFTER you first define it ;)");
 
 /* ================================================= */
@@ -64,16 +67,17 @@ function calculation(functionToRun) {
     console.log(result);
 }
 
-//console.log("This function accepts ANOTHER FUNCTION as a parameter!");
-//calculation(multiply);
+console.log("This function accepts ANOTHER FUNCTION as a parameter!");
+calculation(multiply);
 
 //Note: when we pass a function into another function in order to run it later, we do NOT use the parenthesises - otherwise, that will 'invoke' it right away!
-//calculation(multiply(1,2)); //what do you think will happen?
+//calculation( multiply(1,2) ); //what do you think will happen?
 
 /* ================================================= */
 // Lastly, when passing a function into something else as a parameter, we can just write that entire code directly!  
 
 //This is called an 'anonymous' function, because it doesn't have a name anywhere else in the code!
 
-//console.log("This function accepts an anonymous function:");
-//calculation( function(numOne, numTwo) { return numOne/numTwo; } ); 
+console.log("This function accepts an anonymous function:");
+calculation( function(numOne, numTwo) { return numOne/numTwo; } ); 
+
