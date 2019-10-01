@@ -14,6 +14,11 @@ Functions are like recipes for our programs - they are repeatable routines that 
 * ```callbacks.js``` -
     JavaScript runs really fast - it doesn't always know how to slow down and wait for something to finish before moving on!  Callbacks are one way to handle this problem :)
 
+### References
+Some folks may have noticed 'strange' behavior when trying to assign arrays and objects to variables. 
+* ```objects-are-by-reference``` - Explains what's going on when you use the assignment operator (the = sign) to try and copy an object or array.
+* ```copying-arrays``` - Looks at one (ES6) option for creating a new array (and a possible 'gotcha')
+
 ### Asynchronous Ahoy!
 Callbacks are one way we can handle operations that take a variable amount of time -- "promises" are another!  "Promises" allow us to provide separate callbacks to run if the 'promise' was fulfilled successfully (or did not work as expected).
 
