@@ -12,9 +12,12 @@ function apiCall(data){
 // Since this is our function definition, and we know we want to run a function after our apiCall is successful, we have to add two things to our function definition: a *second parameter that will act as a placeholder for our callback function*, and *a call to our callback function*.
 function apiCall(data, callbackFunction){
     $.ajax(data).then(function(response){
-        console.log("This console.log is a placeholder for what we do with our response object.")
+        console.log("Bring bring hello API, may I please have a response object?")
+    }).then(function(error, response){
+        if (err) throw err;
+        console.log("Let's do something with our " + response + "!");
+        callbackFunction(response.data);
     })
-    callbackFunction();
 }
 // As you can see, we only added two things: callbackFunction as a *placeholder variable* in our parameters, and a callbackFunction() invocation as the last line of code in our apiCall() function. callbackFunction() is very important, as it is what references our callbackFunction *placeholder variable* and runs the callback function *we will feed to apiCall() as its second parameter*.
 
