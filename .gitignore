@@ -1,2 +1,4 @@
 archive/
 node_modules/
+exploitable/mysql/node_modules/
+exploitable/mysql/.env
