@@ -28,4 +28,7 @@ Callbacks are one way we can handle operations that take a variable amount of ti
 * Async / Await Keywords
     * ```async-await``` - 
     **New for ES6** -- many modern browsers (and runtime environments like Node) support new features like the 'async' and 'await' keywords for telling JavaScript when to wait for something to happen.
-
+* Exploitable 
+    * ```mysql``` folder -
+    **WARNING** - do not deploy this code as-is to a publicly accessible place like Heroku.
+    This example server is insecure on purpose!  Run this on your local computer and see if you can find ways to break it. Can you figure out some places where it is vulnerable to script injection and SQL injection?  What might you do to prevent this stuff?
